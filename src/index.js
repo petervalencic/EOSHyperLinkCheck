@@ -45,9 +45,7 @@ const verifyData = async (data) => {
   for (const row in data) {
     const pageName = data[row][0];
     const url = data[row][1];
-    console.log(url);
     const document = await getData(url);
-    console.log(document);
     const $ = await cheerio.load(document);
     const links = extractLinks($);
     console.log("links " + links);
@@ -63,6 +61,7 @@ const verifyData = async (data) => {
   const excelData = await readInputData(
     "C:/NodeProjects/peter/EOSHyperLinkCheck/data/test.xlsx"
   );
+  //verify hyperlinks
   await verifyData(excelData);
 
   console.log(chalk.yellow(`End`));
