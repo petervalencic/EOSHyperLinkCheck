@@ -48,7 +48,6 @@ const verifyData = async (data) => {
     const document = await getData(url);
     const $ = await cheerio.load(document);
     const links = extractLinks($);
-    console.log("links " + links);
     await verifyLinks(links, pageName);
   }
 };
