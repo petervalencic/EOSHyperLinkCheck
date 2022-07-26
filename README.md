@@ -1,6 +1,6 @@
 # EOSHyperLinkCheck
 
-A simple scrapper that checks for hyperlinks and verify if the link is accessible or not mainly used by EOSSupport.io team
+A simple scrapper that will be used by EOSSupport.io team to check for broken links in published articles
 
 # Installation
 
