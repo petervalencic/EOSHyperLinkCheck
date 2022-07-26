@@ -35,13 +35,15 @@ const getData = async (URL) => {
 };
 
 const readInputData = async (fileName) => {
-  console.log(fileName);
   const data = await readXlsxFile(fileName);
   return await data;
 };
 
 const verifyData = async (data) => {
-  //console.log(data);
+  if (!data) {
+    throw new Error("Empty array");
+  }
+
   for (const row in data) {
     const pageName = data[row][0];
     const url = data[row][1];
